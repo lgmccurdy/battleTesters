@@ -1,0 +1,8 @@
+doc: film++newline.
+film: title, tab, year, tab, country, tab, runtime.
+title: ~[#9;#d;#a]+.
+year: ~[#9;#d;#a]+.
+country: ~[#9;#d;#a]+.
+runtime: ~[#9;#d;#a]+.
+-tab: -#9.
+-newline: (-#d?, #a).
