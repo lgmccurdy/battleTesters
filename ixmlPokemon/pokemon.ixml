@@ -1,0 +1,26 @@
+moves: move+.
+{Struggled with getting grammar to output with the category names listed at the start of the text file}
+
+move: name, tab, type, tab, cat, tab, power, tab, acc, tab, pp, tab, effect, newline?.
+
+name: -text.
+
+effect: -text.
+
+type: ("Bug" ; "Dark" ; "Dragon" ; "Electric" ; "Fairy" ; "Fighting" ; "Fire" ; "Flying" ; "Ghost" ; "Grass" ; "Ground" ; "Ice" ; "Normal" ; "Poison" ; "Psychic" ; "Rock" ; "Steel" ; "Water").
+{List of all Pokémon types.}
+
+cat: ("Special" ; "Physical" ; "Status"), -space.
+
+power: ([N]+ ; em), -space.
+
+acc: ([N]+ ; em), -space.
+
+pp: [N]+, -space.
+
+-tab: -#9.
+-newline: (-#d?, #a).
+-space: -#20.
+-em: #2014.
+-text: ~[#9;#d;#a]+.
+{Define text}
